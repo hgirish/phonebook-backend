@@ -1,0 +1,36 @@
+### get all persons
+GET http://localhost:3001/api/persons
+
+### get person with id 3
+GET http://localhost:3001/api/persons/3
+
+### delete person with id 3
+DELETE http://localhost:3001/api/persons/3
+
+### get person with id 3
+GET http://localhost:3001/api/persons/3
+
+### name must be unique if sending second time
+POST http://localhost:3001/api/persons
+Content-Type: application/json
+
+{
+"name": "Nicole Tesla",
+"number": "12-34-56789"
+}
+
+### number missing
+POST http://localhost:3001/api/persons
+Content-Type: application/json
+
+{
+"name": "Nicole Tesla"
+}
+
+### name missing
+POST http://localhost:3001/api/persons
+Content-Type: application/json
+
+{
+"number": "12-34-56789"
+}
